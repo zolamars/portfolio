@@ -29,7 +29,7 @@ export function Navigation() {
     <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
-          <span className="text-xl font-bold">Zolbera</span>
+          <span className="text-xl font-bold pl-8" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -48,7 +48,7 @@ export function Navigation() {
               {item.label}
             </Link>
           ))}
-          
+
           <Button
             variant="ghost"
             size="sm"
@@ -73,18 +73,14 @@ export function Navigation() {
             <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
             <span className="sr-only">Toggle theme</span>
           </Button>
-          
+
           <Button
             variant="ghost"
             size="sm"
             onClick={() => setIsOpen(!isOpen)}
             className="w-9 px-0"
           >
-            {isOpen ? (
-              <X className="h-4 w-4" />
-            ) : (
-              <Menu className="h-4 w-4" />
-            )}
+            {isOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
             <span className="sr-only">Toggle menu</span>
           </Button>
         </div>

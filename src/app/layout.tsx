@@ -15,8 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Zolbera - Frontend Developer & Scrum Master",
-  description: "Portfolio of Zolbera, a passionate Frontend Developer and Scrum Master specializing in React, Next.js, and modern web technologies.",
+  title: "Zelalem - Frontend Developer & Scrum Master",
+  description:
+    "Portfolio of Zelalem, a passionate Frontend Developer and Scrum Master specializing in React, Next.js, and modern web technologies.",
 };
 
 export default function RootLayout({
@@ -29,15 +30,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeProvider
-          defaultTheme="system"
-          storageKey="zolbera-theme"
-        >
+        <ThemeProvider defaultTheme="system" storageKey="zolbera-theme">
           <div className="min-h-screen bg-background font-sans antialiased">
             <Navigation />
-            <main className="flex-1">
-              {children}
-            </main>
+            <main className="flex-1">{children}</main>
           </div>
         </ThemeProvider>
       </body>

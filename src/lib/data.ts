@@ -23,7 +23,7 @@ export const professionalExperience = [
   },
   {
     company: "Fineto IoT Solutions",
-    position: "Hardware  Software Engineer",
+    position: "Hardware & Software Engineer",
     duration: "07/2019 - 05/2022",
     location: "Addis Ababa, Ethiopia",
     responsibilities: [
@@ -69,10 +69,10 @@ export const education = {
 export const projects: Project[] = [
   {
     id: "byd-cms",
-    title: "BYD Electric Vehicle Credit Management System",
+    title: "FinTech Credit Management System",
     description: "A comprehensive credit management system built for FinTech Investment PLC, financing BYD electric vehicles in Ethiopia.",
     longDescription: "A comprehensive credit management system built for FinTech Investment PLC, an Ethiopian company financing BYD electric vehicles. The platform supports the entire credit lifecycle—customer onboarding, credit assessment, payment tracking, penalty calculation, and document handling. It includes role-based access control, SMS notifications, digital agreement workflows, exchange rate management, and real-time reporting across 15+ interconnected modules.",
-    techStack: ["React", "TypeScript", "Node.js", "MongoDB", "Express", "SMS Integration", "PDF Generation"],
+    techStack: ["React", "TypeScript", "Material UI", "React Query", "SMS Integration", "PDF Generation"],
     liveUrl: "https://cms.fintechinvestment.net",
     featured: true,
     status: "completed",
@@ -83,7 +83,7 @@ export const projects: Project[] = [
     title: "Ride, Delivery & E-commerce Platform",
     description: "Multi-service platform combining ride-hailing, delivery services, and e-commerce functionality.",
     longDescription: "Currently developing a comprehensive platform that integrates ride-hailing services, delivery logistics, and e-commerce capabilities for Semay Software. Serving as Frontend Developer, Scrum Master, and preparing project proposals to ensure successful delivery.",
-    techStack: ["React", "Next.js", "TypeScript", "Node.js", "PostgreSQL", "Redis", "Microservices"],
+    techStack: ["React", "Next.js", "TypeScript", "Material UI", "React Query"],
     featured: true,
     status: "in-progress",
     category: "web"
@@ -94,6 +94,7 @@ export const projects: Project[] = [
     description: "Complete ride management ecosystem with SSO, admin panels, and corporate dashboards.",
     longDescription: "Developed a comprehensive suite of web applications for TwoF Capital including Ride Plus SSO authentication system, System Admin dashboard, and Corporate Admin panel for managing ride services, user accounts, and business operations.",
     techStack: ["React", "TypeScript", "SSO", "Admin Dashboards", "Role-based Access"],
+    liveUrl: "https://rpadmin.rideplus.co",
     featured: true,
     status: "completed",
     category: "web"
@@ -105,7 +106,7 @@ export const projects: Project[] = [
     longDescription: "Built a complete payment gateway ecosystem for TwoF Capital featuring separate Admin dashboard for system management, Merchant portal for business users, and secure Checkout application for seamless payment processing.",
     techStack: ["React", "TypeScript", "Payment APIs", "Security", "Admin Panels"],
     featured: true,
-    status: "completed",
+    status: "in-progress",
     category: "web"
   },
   {
@@ -191,13 +192,13 @@ export const certificates: Certificate[] = [
     id: "agile-jira",
     name: "Agile with Atlassian Jira",
     issuer: "Atlassian",
-    date: "2023"
+    date: "2025"
   },
   {
     id: "python-basics",
     name: "Programming for Everybody (Getting Started with Python)",
     issuer: "University of Michigan (Coursera)",
-    date: "2023"
+    date: "2025"
   }
 ];
 
@@ -207,7 +208,7 @@ export const aboutMe = {
   highlights: [
     "Frontend development with modern frameworks",
     "Agile project management and team leadership",
-    "Full-stack web application development",
+    // "Full-stack web application development",
     "Credit management and fintech systems",
     "Responsive and accessible UI/UX design"
   ]
