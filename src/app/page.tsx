@@ -4,73 +4,156 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { qualifications, contactInfo } from "@/lib/data";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
+    <div className="min-h-screen bg-muted">
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-16 md:py-24">
-        <div className="text-center space-y-6">
-          <div className="space-y-2">
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-              Zelalem Abera Regassa
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground">
-              Senior Frontend Developer
-            </p>
-            <div className="flex items-center justify-center gap-2 text-muted-foreground">
-              <MapPin className="h-4 w-4" />
-              <span>Addis Ababa, Ethiopia</span>
+      <section className="container mx-auto px-4 py-10 md:py-8 relative z-10">
+        <div className="text-center space-y-8 animate-slide-in-up">
+          {/* Profile Picture */}
+          <div className="flex justify-center animate-scale-in">
+            <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-primary shadow-2xl">
+              <Image
+                src="/pic.jpg"
+                alt="Zelalem Abera Regassa"
+                width={160}
+                height={160}
+                className="w-full h-full object-cover"
+                priority
+              />
             </div>
           </div>
-          
-          <p className="text-lg max-w-2xl mx-auto text-muted-foreground">
-            Passionate about creating exceptional web experiences with modern technologies.
-            Specializing in React, Next.js, and leading agile development teams.
-          </p>
-          
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg">
+          <div className="space-y-4">
+            <div className="inline-block animate-scale-in">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 dark:from-blue-400 dark:via-purple-400 dark:to-indigo-400 bg-clip-text text-transparent animate-gradient">
+                Zelalem Abera Regassa
+              </h1>
+            </div>
+            <div
+              className="space-y-2 animate-slide-in-up"
+              style={{ animationDelay: "0.2s" }}
+            >
+              <p className="text-xl md:text-3xl font-semibold text-slate-700 dark:text-slate-300">
+                Senior Frontend Developer | AI Enthusiast
+              </p>
+              <div className="flex items-center justify-center gap-2 text-slate-600 dark:text-slate-400">
+                <MapPin className="h-5 w-5 text-blue-500" />
+                <span className="text-lg">Addis Ababa, Ethiopia</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            className="animate-slide-in-up"
+            style={{ animationDelay: "0.4s" }}
+          >
+            <p className="text-lg md:text-xl max-w-3xl mx-auto text-slate-600 dark:text-slate-300 leading-relaxed">
+              Passionate about creating exceptional web experiences with modern
+              technologies. Specializing in{" "}
+              <span className="font-semibold text-blue-600 dark:text-blue-400">
+                React
+              </span>
+              ,
+              <span className="font-semibold text-purple-600 dark:text-purple-400">
+                {" "}
+                Next.js
+              </span>
+              , and{" "}
+              <span className="font-semibold text-indigo-600 dark:text-indigo-400">
+                leading agile development teams
+              </span>
+              .
+            </p>
+          </div>
+
+          <div
+            className="flex flex-wrap justify-center gap-6 animate-slide-in-up"
+            style={{ animationDelay: "0.6s" }}
+          >
+            <Button
+              asChild
+              size="lg"
+              className="button-hover bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0 px-8 py-3 text-lg font-semibold rounded-xl"
+            >
               <Link href="/projects">View My Work</Link>
             </Button>
-            <Button variant="outline" size="lg" asChild>
+            <Button
+              variant="outline"
+              size="lg"
+              asChild
+              className="button-hover border-2 border-blue-300 dark:border-blue-600 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 px-8 py-3 text-lg font-semibold rounded-xl"
+            >
               <Link href="/contact">Get In Touch</Link>
             </Button>
           </div>
-          
+
           {/* Social Links */}
-          <div className="flex justify-center gap-4 pt-4">
-            <Button variant="ghost" size="icon" asChild>
+          <div
+            className="flex justify-center gap-6 pt-6 animate-slide-in-up"
+            style={{ animationDelay: "0.8s" }}
+          >
+            <Button
+              variant="ghost"
+              size="icon"
+              asChild
+              className="button-hover w-12 h-12 rounded-full bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900 hover:from-blue-200 hover:to-purple-200 dark:hover:from-blue-800 dark:hover:to-purple-800"
+            >
               <a href={`mailto:${contactInfo.email}`} aria-label="Email">
-                <Mail className="h-5 w-5" />
+                <Mail className="h-6 w-6 text-blue-600 dark:text-blue-400" />
               </a>
             </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <a href={`https://${contactInfo.linkedin}`} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <Linkedin className="h-5 w-5" />
+            <Button
+              variant="ghost"
+              size="icon"
+              asChild
+              className="button-hover w-12 h-12 rounded-full bg-gradient-to-r from-purple-100 to-indigo-100 dark:from-purple-900 dark:to-indigo-900 hover:from-purple-200 hover:to-indigo-200 dark:hover:from-purple-800 dark:hover:to-indigo-800"
+            >
+              <a
+                href={`${contactInfo.linkedin}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-6 w-6 text-purple-600 dark:text-purple-400" />
               </a>
             </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <a href={`https://${contactInfo.github}`} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <Github className="h-5 w-5" />
+            <Button
+              variant="ghost"
+              size="icon"
+              asChild
+              className="button-hover w-12 h-12 rounded-full bg-gradient-to-r from-indigo-100 to-blue-100 dark:from-indigo-900 dark:to-blue-900 hover:from-indigo-200 hover:to-blue-200 dark:hover:from-indigo-800 dark:hover:to-blue-800"
+            >
+              <a
+                href={`${contactInfo.github}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <Github className="h-6 w-6 text-indigo-600 dark:text-indigo-400" />
               </a>
             </Button>
           </div>
         </div>
       </section>
-      
+
       {/* Qualifications Section */}
       <section className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Summary of Qualifications</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Over 5 years of experience in frontend development with a strong track record of delivering high-quality web applications.
+            Over 5 years of experience in frontend development with a strong
+            track record of delivering high-quality web applications.
           </p>
         </div>
-        
+
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {qualifications.map((qualification, index) => (
-            <Card key={index} className="transition-all duration-300 hover:shadow-lg hover:scale-105">
+            <Card
+              key={index}
+              className="transition-all duration-300 hover:shadow-lg hover:scale-105"
+            >
               <CardContent className="p-6">
                 <div className="flex items-start space-x-3">
                   <div className="flex-shrink-0">
@@ -83,7 +166,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-      
+
       {/* Key Skills Preview */}
       <section className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
@@ -92,19 +175,36 @@ export default function Home() {
             Technologies I work with to build amazing digital experiences
           </p>
         </div>
-        
+
         <div className="flex flex-wrap justify-center gap-3">
-          {["React.js", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "Spring Boot", "Git", "Jira", "Agile/Scrum"]
-            .map((skill) => (
-              <Badge key={skill} variant="secondary" className="px-4 py-2 text-sm">
-                {skill}
-              </Badge>
-            ))
-          }
+          {[
+            "React.js",
+            "Next.js",
+            "TypeScript",
+            "JavaScript",
+            "Tailwind CSS",
+            // "Spring Boot",
+            "Git",
+            "Jira",
+            "Azure DevOps",
+            "Agile/Scrum",
+          ].map((skill) => (
+            <Badge
+              key={skill}
+              variant="secondary"
+              className="px-4 py-2 text-sm"
+            >
+              {skill}
+            </Badge>
+          ))}
         </div>
-        
+
         <div className="text-center mt-8">
-          <Button variant="outline" asChild>
+          <Button
+            variant="outline"
+            asChild
+            className="bg-gradient-to-r from-slate-600 to-gray-600 hover:from-slate-700 hover:to-gray-700 text-white border-0 px-8 py-3 text-lg font-semibold rounded-xl button-hover"
+          >
             <Link href="/about">Learn More About Me</Link>
           </Button>
         </div>

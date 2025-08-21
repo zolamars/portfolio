@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { useTheme } from "@/components/theme-provider";
 import { Moon, Sun, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -25,12 +26,31 @@ export function Navigation() {
     setTheme(theme === "light" ? "dark" : "light");
   };
 
+  // Only show picture on non-home pages
+  const isHomePage = pathname === "/";
+
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center space-x-2">
-          <span className="text-xl font-bold">Zolbera</span>
-        </Link>
+        {/* Logo with picture - only show on non-home pages */}
+        {!isHomePage ? (
+          <div className=" mx-2">
+            <Link href="/" className="flex items-center space-x-3">
+              <div className=" hidden md:block w-10 h-10 rounded-full overflow-hidden border-2 border-primary shadow-sm">
+                <Image
+                  src="/pic.jpg"
+                  alt="Zelalem"
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-cover"
+                  priority
+                />
+              </div>
+            </Link>
+          </div>
+        ) : (
+          <div />
+        )}
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
@@ -48,7 +68,7 @@ export function Navigation() {
               {item.label}
             </Link>
           ))}
-          
+
           <Button
             variant="ghost"
             size="sm"
@@ -63,6 +83,20 @@ export function Navigation() {
 
         {/* Mobile Navigation */}
         <div className="md:hidden flex items-center space-x-2">
+          {/* Mobile picture - only show on non-home pages */}
+          {!isHomePage && (
+            <div className="w-8 h-8 rounded-full overflow-hidden border-2 border-primary mr-2">
+              <Image
+                src="/pic.jpg"
+                alt="Zelalem"
+                width={40}
+                height={40}
+                className="w-full h-full object-cover"
+                priority
+              />
+            </div>
+          )}
+
           <Button
             variant="ghost"
             size="sm"
@@ -73,18 +107,14 @@ export function Navigation() {
             <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
             <span className="sr-only">Toggle theme</span>
           </Button>
-          
+
           <Button
             variant="ghost"
             size="sm"
             onClick={() => setIsOpen(!isOpen)}
             className="w-9 px-0"
           >
-            {isOpen ? (
-              <X className="h-4 w-4" />
-            ) : (
-              <Menu className="h-4 w-4" />
-            )}
+            {isOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
             <span className="sr-only">Toggle menu</span>
           </Button>
         </div>

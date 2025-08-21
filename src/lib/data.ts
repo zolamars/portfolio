@@ -2,8 +2,8 @@ import { Project, Experience, Skill, Certificate, ContactInfo } from "@/types";
 
 export const contactInfo: ContactInfo = {
   email: "zolyemek@gmail.com",
-  linkedin: "linkedin.com/in/zolbera",
-  github: "github.com/zolamars",
+  linkedin: "https://www.linkedin.com/in/zolbera",
+  github: "https://github.com/zolamars",
   location: "Ethiopia"
 };
 export const professionalExperience = [
@@ -23,7 +23,7 @@ export const professionalExperience = [
   },
   {
     company: "Fineto IoT Solutions",
-    position: "Hardware  Software Engineer",
+    position: "Hardware & Software Engineer",
     duration: "07/2019 - 05/2022",
     location: "Addis Ababa, Ethiopia",
     responsibilities: [
@@ -69,10 +69,10 @@ export const education = {
 export const projects: Project[] = [
   {
     id: "byd-cms",
-    title: "BYD Electric Vehicle Credit Management System",
+    title: "FinTech Credit Management System",
     description: "A comprehensive credit management system built for FinTech Investment PLC, financing BYD electric vehicles in Ethiopia.",
     longDescription: "A comprehensive credit management system built for FinTech Investment PLC, an Ethiopian company financing BYD electric vehicles. The platform supports the entire credit lifecycle—customer onboarding, credit assessment, payment tracking, penalty calculation, and document handling. It includes role-based access control, SMS notifications, digital agreement workflows, exchange rate management, and real-time reporting across 15+ interconnected modules.",
-    techStack: ["React", "TypeScript", "Node.js", "MongoDB", "Express", "SMS Integration", "PDF Generation"],
+    techStack: ["React", "TypeScript", "Material UI", "React Query", "SMS Integration", "PDF Generation"],
     liveUrl: "https://cms.fintechinvestment.net",
     featured: true,
     status: "completed",
@@ -83,7 +83,7 @@ export const projects: Project[] = [
     title: "Ride, Delivery & E-commerce Platform",
     description: "Multi-service platform combining ride-hailing, delivery services, and e-commerce functionality.",
     longDescription: "Currently developing a comprehensive platform that integrates ride-hailing services, delivery logistics, and e-commerce capabilities for Semay Software. Serving as Frontend Developer, Scrum Master, and preparing project proposals to ensure successful delivery.",
-    techStack: ["React", "Next.js", "TypeScript", "Node.js", "PostgreSQL", "Redis", "Microservices"],
+    techStack: ["React", "Next.js", "TypeScript", "Material UI", "React Query"],
     featured: true,
     status: "in-progress",
     category: "web"
@@ -94,6 +94,7 @@ export const projects: Project[] = [
     description: "Complete ride management ecosystem with SSO, admin panels, and corporate dashboards.",
     longDescription: "Developed a comprehensive suite of web applications for TwoF Capital including Ride Plus SSO authentication system, System Admin dashboard, and Corporate Admin panel for managing ride services, user accounts, and business operations.",
     techStack: ["React", "TypeScript", "SSO", "Admin Dashboards", "Role-based Access"],
+    liveUrl: "https://rpadmin.rideplus.co",
     featured: true,
     status: "completed",
     category: "web"
@@ -105,7 +106,7 @@ export const projects: Project[] = [
     longDescription: "Built a complete payment gateway ecosystem for TwoF Capital featuring separate Admin dashboard for system management, Merchant portal for business users, and secure Checkout application for seamless payment processing.",
     techStack: ["React", "TypeScript", "Payment APIs", "Security", "Admin Panels"],
     featured: true,
-    status: "completed",
+    status: "in-progress",
     category: "web"
   },
   {
@@ -115,6 +116,17 @@ export const projects: Project[] = [
     longDescription: "Served as Product Owner and project facilitator for Mira Coffee's company profile website. The project showcases their Ethiopian coffee varieties, farming practices, and company heritage with a focus on tradition and quality.",
     techStack: ["WordPress", "PHP", "MySQL", "Responsive Design", "SEO"],
     liveUrl: "https://miracoffees.com",
+    featured: false,
+    status: "completed",
+    category: "web"
+  },
+  {
+    id: "semay-website",
+    title: "Semay Software Website",
+    description: "Corporate marketing website for Semay Software PLC.",
+    longDescription: "Designed and implemented a clean, responsive marketing site for Semay Software PLC to showcase services and company profile.",
+    techStack: ["React", "Vite" , "Tailwind CSS"],
+    liveUrl: "https://www.semaysoftware.com/",
     featured: false,
     status: "completed",
     category: "web"
@@ -164,7 +176,7 @@ export const experiences: Experience[] = [
 
 export const skills: Skill[] = [
   // Frontend
-  { id: "react", name: "React", category: "frontend", level: "advanced" },
+  { id: "react", name: "React", category: "frontend", level: "expert" },
   { id: "nextjs", name: "Next.js", category: "frontend", level: "advanced" },
   { id: "typescript", name: "TypeScript", category: "frontend", level: "advanced" },
   { id: "javascript", name: "JavaScript", category: "frontend", level: "expert" },
@@ -173,17 +185,28 @@ export const skills: Skill[] = [
   { id: "css", name: "CSS3", category: "frontend", level: "advanced" },
   
   // Backend
-  { id: "nodejs", name: "Node.js", category: "backend", level: "advanced" },
-  { id: "express", name: "Express.js", category: "backend", level: "advanced" },
+  // { id: "nodejs", name: "Node.js", category: "backend", level: "advanced" },
+  // { id: "express", name: "Express.js", category: "backend", level: "advanced" },
   { id: "mongodb", name: "MongoDB", category: "backend", level: "intermediate" },
   { id: "postgresql", name: "PostgreSQL", category: "backend", level: "intermediate" },
   { id: "python", name: "Python", category: "backend", level: "intermediate" },
+  { id: "numpy", name: "NumPy", category: "backend", level: "intermediate" },
+  { id: "pandas", name: "Pandas", category: "backend", level: "intermediate" },
+  // { id: "sklearn", name: "scikit-learn", category: "backend", level: "beginner" },
+  // { id: "matplotlib", name: "Matplotlib", category: "backend", level: "beginner" },
+  { id: "spring", name: "Spring Boot", category: "backend", level: "beginner" },
+  { id: "java", name: "Java", category: "backend", level: "beginner" },
   
-  // Tools
+  // Tools & ML
   { id: "git", name: "Git", category: "tools", level: "advanced" },
   { id: "jira", name: "Jira", category: "tools", level: "advanced" },
+  { id: "azure", name: "Azure Devops", category: "tools", level: "advanced" },
   { id: "scrum", name: "Scrum/Agile", category: "tools", level: "advanced" },
-  { id: "figma", name: "Figma", category: "tools", level: "intermediate" }
+  { id: "figma", name: "Figma", category: "tools", level: "intermediate" },
+  { id: "jupyter", name: "Jupyter Notebook", category: "tools", level: "intermediate" },
+  { id: "ai", name: "Artificial Intelligence", category: "other", level: "beginner" },
+  { id: "ml", name: "Machine Learning", category: "other", level: "beginner" },
+  { id: "data-analysis", name: "Data Analysis", category: "other", level: "beginner" }
 ];
 
 export const certificates: Certificate[] = [
@@ -191,24 +214,66 @@ export const certificates: Certificate[] = [
     id: "agile-jira",
     name: "Agile with Atlassian Jira",
     issuer: "Atlassian",
-    date: "2023"
+    date: "2025"
   },
   {
     id: "python-basics",
     name: "Programming for Everybody (Getting Started with Python)",
     issuer: "University of Michigan (Coursera)",
-    date: "2023"
+    date: "2025"
+  },
+  {
+    id: "ftl-ml-bootcamp",
+    name: "Frontier Tech Leaders Programme – Ethiopia Machine Learning Bootcamp",
+    issuer: "UNDP",
+    date: "2025"
+  },
+  {
+    id: "hp-life-digital-business",
+    name: "Introduction to Digital Business Skills",
+    issuer: "HP LIFE",
+    date: "2025",
+    credentialId: "ff6d57d4-5ec5-463e-b42b-4ed2a561d3e5"
+  },
+  {
+    id: "hp-life-uvp",
+    name: "Unique Value Proposition",
+    issuer: "HP LIFE",
+    date: "2025",
+    credentialId: "a06c844b-0f19-43be-b97b-965a4e264b74"
+  },
+  {
+    id: "hp-life-basics-finance",
+    name: "Basics of Finance",
+    issuer: "HP LIFE",
+    date: "2025",
+    credentialId: "01d5bea6-6357-44a8-8a05-7319840f170c"
+  },
+  {
+    id: "hp-life-design-thinking",
+    name: "Design Thinking",
+    issuer: "HP LIFE",
+    date: "2025",
+    credentialId: "5684a556-a16c-4d4a-894b-b6097206f3e3"
+  },
+  {
+    id: "hp-life-effective-leadership",
+    name: "Effective Leadership",
+    issuer: "HP LIFE",
+    date: "2025",
+    credentialId: "603e0a35-2ef8-48cd-8890-5baf3d56607a"
   }
 ];
 
 export const aboutMe = {
-  intro: "I'm a passionate Frontend Developer and Scrum Master with experience in building modern web applications and leading agile development teams.",
-  description: "With a strong foundation in React, Next.js, and TypeScript, I specialize in creating responsive, user-friendly web applications. My experience spans from fintech solutions to multi-service platforms, and I'm committed to writing clean, maintainable code while ensuring excellent user experiences.",
+  intro: "I'm a passionate Frontend Developer and Scrum Master with a growing interest in AI and Python development, building modern web applications while exploring the intersection of web technologies and artificial intelligence.",
+  description: "With a strong foundation in React, Next.js, and TypeScript, I specialize in creating responsive, user-friendly web applications. My experience spans from fintech solutions to multi-service platforms, and I'm committed to writing clean, maintainable code while ensuring excellent user experiences. Recently, I've been expanding my skill set into Python and AI through the UNDP Frontier Tech Leaders programme, exploring how artificial intelligence and data science can enhance web applications.",
   highlights: [
-    "Frontend development with modern frameworks",
+    "Frontend development with modern React ecosystem",
     "Agile project management and team leadership",
-    "Full-stack web application development",
-    "Credit management and fintech systems",
-    "Responsive and accessible UI/UX design"
+    "Python programming and data analysis with NumPy, Pandas",
+    "AI and Machine Learning fundamentals through UNDP bootcamp",
+    "Credit management and fintech systems development",
+    "AI-driven web applications and intelligent user experiences"
   ]
 };
