@@ -4,26 +4,29 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { qualifications, contactInfo } from "@/lib/data";
+import Image from "next/image";
+// import image from "@/../public/pic.jpg";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-blue-950 dark:to-indigo-950 animate-gradient">
-      {/* Floating Background Elements */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-400/10 rounded-full blur-3xl animate-float"></div>
-        <div
-          className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-400/10 rounded-full blur-3xl animate-float"
-          style={{ animationDelay: "2s" }}
-        ></div>
-        <div
-          className="absolute top-1/2 left-3/4 w-48 h-48 bg-indigo-400/10 rounded-full blur-3xl animate-float"
-          style={{ animationDelay: "4s" }}
-        ></div>
-      </div>
+<div className="min-h-screen bg-muted">
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-16 md:py-24 relative z-10">
+      <section className="container mx-auto px-4 py-10 md:py-8 relative z-10">
         <div className="text-center space-y-8 animate-slide-in-up">
+          {/* Profile Picture */}
+          <div className="flex justify-center animate-scale-in">
+            <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-primary shadow-2xl">
+              <Image
+                src="/pic.jpg"
+                alt="Zelalem Abera Regassa"
+                width={160}
+                height={160}
+                className="w-full h-full object-cover"
+                priority
+              />
+            </div>
+          </div>
           <div className="space-y-4">
             <div className="inline-block animate-scale-in">
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 dark:from-blue-400 dark:via-purple-400 dark:to-indigo-400 bg-clip-text text-transparent animate-gradient">
@@ -59,7 +62,7 @@ export default function Home() {
                 {" "}
                 Next.js
               </span>
-              , and
+              , and{" "}
               <span className="font-semibold text-indigo-600 dark:text-indigo-400">
                 leading agile development teams
               </span>
@@ -110,7 +113,7 @@ export default function Home() {
               className="button-hover w-12 h-12 rounded-full bg-gradient-to-r from-purple-100 to-indigo-100 dark:from-purple-900 dark:to-indigo-900 hover:from-purple-200 hover:to-indigo-200 dark:hover:from-purple-800 dark:hover:to-indigo-800"
             >
               <a
-                href={`https://${contactInfo.linkedin}`}
+                href={`${contactInfo.linkedin}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -125,7 +128,7 @@ export default function Home() {
               className="button-hover w-12 h-12 rounded-full bg-gradient-to-r from-indigo-100 to-blue-100 dark:from-indigo-900 dark:to-blue-900 hover:from-indigo-200 hover:to-blue-200 dark:hover:from-indigo-800 dark:hover:to-blue-800"
             >
               <a
-                href={`https://${contactInfo.github}`}
+                href={`${contactInfo.github}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"

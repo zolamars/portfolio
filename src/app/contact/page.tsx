@@ -213,7 +213,7 @@ export default function Contact() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <a
-                  href={`https://${contactInfo.linkedin}`}
+                  href={`${contactInfo.linkedin}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-3 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900 transition-all duration-300 group"
@@ -230,7 +230,7 @@ export default function Contact() {
                 </a>
 
                 <a
-                  href={`https://${contactInfo.github}`}
+                  href={`${contactInfo.github}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-3 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900 transition-all duration-300 group"

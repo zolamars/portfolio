@@ -2,8 +2,8 @@ import { Project, Experience, Skill, Certificate, ContactInfo } from "@/types";
 
 export const contactInfo: ContactInfo = {
   email: "zolyemek@gmail.com",
-  linkedin: "linkedin.com/in/zolbera",
-  github: "github.com/zolamars",
+  linkedin: "https://www.linkedin.com/in/zolbera",
+  github: "https://github.com/zolamars",
   location: "Ethiopia"
 };
 export const professionalExperience = [
@@ -199,6 +199,47 @@ export const certificates: Certificate[] = [
     name: "Programming for Everybody (Getting Started with Python)",
     issuer: "University of Michigan (Coursera)",
     date: "2025"
+  },
+  {
+    id: "ftl-ml-bootcamp",
+    name: "Frontier Tech Leaders Programme – Ethiopia Machine Learning Bootcamp",
+    issuer: "UNDP",
+    date: "2025"
+  },
+  {
+    id: "hp-life-digital-business",
+    name: "Introduction to Digital Business Skills",
+    issuer: "HP LIFE",
+    date: "2025",
+    credentialId: "ff6d57d4-5ec5-463e-b42b-4ed2a561d3e5"
+  },
+  {
+    id: "hp-life-uvp",
+    name: "Unique Value Proposition",
+    issuer: "HP LIFE",
+    date: "2025",
+    credentialId: "a06c844b-0f19-43be-b97b-965a4e264b74"
+  },
+  {
+    id: "hp-life-basics-finance",
+    name: "Basics of Finance",
+    issuer: "HP LIFE",
+    date: "2025",
+    credentialId: "01d5bea6-6357-44a8-8a05-7319840f170c"
+  },
+  {
+    id: "hp-life-design-thinking",
+    name: "Design Thinking",
+    issuer: "HP LIFE",
+    date: "2025",
+    credentialId: "5684a556-a16c-4d4a-894b-b6097206f3e3"
+  },
+  {
+    id: "hp-life-effective-leadership",
+    name: "Effective Leadership",
+    issuer: "HP LIFE",
+    date: "2025",
+    credentialId: "603e0a35-2ef8-48cd-8890-5baf3d56607a"
   }
 ];
 

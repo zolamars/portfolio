@@ -1,62 +1,25 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { aboutMe, skills, education, certificates } from "@/lib/data";
+import { Section } from "@/components/section";
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-green-50 to-lime-50 dark:from-emerald-950 dark:via-green-950 dark:to-lime-950 animate-gradient relative overflow-hidden">
-      {/* Floating Nature Elements */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-emerald-400/10 rounded-full blur-3xl animate-float"></div>
-        <div
-          className="absolute top-3/4 right-1/4 w-96 h-96 bg-green-400/10 rounded-full blur-3xl animate-float"
-          style={{ animationDelay: "3s" }}
-        ></div>
-        <div
-          className="absolute top-1/2 left-3/4 w-48 h-48 bg-lime-400/10 rounded-full blur-3xl animate-float"
-          style={{ animationDelay: "1.5s" }}
-        ></div>
-        {/* Nature-like elements */}
-        <div
-          className="absolute top-1/3 right-1/3 text-emerald-400/20 text-2xl animate-bounce"
-          style={{ animationDelay: "1s" }}
-        >
-          🌱
-        </div>
-        <div
-          className="absolute bottom-1/3 left-1/3 text-green-400/20 text-xl animate-pulse"
-          style={{ animationDelay: "3s" }}
-        >
-          🌿
-        </div>
-        <div
-          className="absolute top-2/3 right-1/4 text-lime-400/20 text-lg animate-spin"
-          style={{ animationDelay: "5s" }}
-        >
-          🍃
-        </div>
-      </div>
-
-      <div className="container mx-auto px-4 relative z-10 py-16">
+    <div className="min-h-screen bg-muted">
+  	<div className="container mx-auto px-4 py-6">
         {/* Header */}
-        <div className="text-center mb-16 animate-bounce-in">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-emerald-600 via-green-600 to-lime-600 dark:from-emerald-400 dark:via-green-400 dark:to-lime-400 bg-clip-text text-transparent animate-gradient">
-            About Me
+        <div className="text-center mb-10">
+          <h1 className="text-3xl md:text-4xl font-semibold tracking-tight">
+            About
           </h1>
-          <p
-            className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed animate-slide-in-up"
-            style={{ animationDelay: "0.2s" }}
-          >
+          <p className="mt-2 text-muted-foreground max-w-2xl mx-auto">
             {aboutMe.intro}
           </p>
         </div>
 
         {/* Description */}
-        <div
-          className="mb-16 animate-slide-in-left"
-          style={{ animationDelay: "0.4s" }}
-        >
-          <Card className="glass border-emerald-200 dark:border-emerald-800 hover:shadow-2xl hover:shadow-emerald-500/20 transition-all duration-500 animate-glow-pulse">
+        <Section>
+          <Card className="border shadow-sm">
             <CardContent className="p-8">
               <p className="text-lg leading-relaxed mb-6 text-slate-700 dark:text-slate-300">
                 {aboutMe.description}
@@ -77,16 +40,10 @@ export default function About() {
               </div>
             </CardContent>
           </Card>
-        </div>
+        </Section>
 
         {/* Skills */}
-        <div className="mb-16">
-          <h2
-            className="text-3xl font-bold mb-8 text-center animate-slide-in-up"
-            style={{ animationDelay: "0.8s" }}
-          >
-            Skills & Technologies
-          </h2>
+        <Section title="Skills & Technologies">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {["frontend", "backend", "tools"].map((category, categoryIndex) => {
               const categorySkills = skills.filter(
@@ -95,7 +52,7 @@ export default function About() {
               return (
                 <Card
                   key={category}
-                  className="animate-slide-in-up glass border-green-200 dark:border-green-800 hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-500 group"
+                  className="border shadow-sm group"
                   style={{ animationDelay: `${1.0 + categoryIndex * 0.2}s` }}
                 >
                   <CardHeader>
@@ -125,20 +82,11 @@ export default function About() {
               );
             })}
           </div>
-        </div>
+        </Section>
 
         {/* Education */}
-        <div className="mb-16">
-          <h2
-            className="text-3xl font-bold mb-8 text-center animate-slide-in-up"
-            style={{ animationDelay: "1.4s" }}
-          >
-            Education
-          </h2>
-          <Card
-            className="animate-slide-in-up glass border-lime-200 dark:border-lime-800 hover:shadow-2xl hover:shadow-lime-500/20 transition-all duration-500"
-            style={{ animationDelay: "1.6s" }}
-          >
+        <Section title="Education">
+          <Card className="border shadow-sm" style={{ animationDelay: "1.6s" }}>
             <CardContent className="p-8">
               <div className="text-center group hover:bg-lime-50 dark:hover:bg-lime-900 p-4 rounded-lg transition-all duration-300">
                 <h3 className="text-xl font-semibold mb-2 group-hover:text-lime-700 dark:group-hover:text-lime-300 transition-colors">
@@ -153,21 +101,15 @@ export default function About() {
               </div>
             </CardContent>
           </Card>
-        </div>
+        </Section>
 
         {/* Certificates */}
-        <div>
-          <h2
-            className="text-3xl font-bold mb-8 text-center animate-slide-in-up"
-            style={{ animationDelay: "1.8s" }}
-          >
-            Certifications
-          </h2>
+        <Section title="Certifications">
           <div className="grid gap-6 md:grid-cols-2">
             {certificates.map((cert, index) => (
               <Card
                 key={cert.id}
-                className="animate-slide-in-up glass border-emerald-200 dark:border-emerald-800 hover:shadow-2xl hover:shadow-emerald-500/20 transition-all duration-500"
+                className="border shadow-sm"
                 style={{ animationDelay: `${2.0 + index * 0.1}s` }}
               >
                 <CardContent className="p-6">
@@ -178,12 +120,27 @@ export default function About() {
                     <p className="text-sm text-muted-foreground group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
                       {cert.issuer} • {cert.date}
                     </p>
+                    {cert.credentialId && (
+                      <p className="text-xs text-emerald-700 dark:text-emerald-300/80">
+                        Credential ID: {cert.credentialId}
+                      </p>
+                    )}
+                    {cert.credentialUrl && (
+                      <a
+                        href={cert.credentialUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs text-primary underline"
+                      >
+                        Show credential
+                      </a>
+                    )}
                   </div>
                 </CardContent>
               </Card>
             ))}
           </div>
-        </div>
+        </Section>
       </div>
     </div>
   );
