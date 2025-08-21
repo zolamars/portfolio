@@ -135,6 +135,4 @@ Customize animations in `src/app/globals.css` under the animation keyframes sect
 
 ---
 
-**"Bridging the gap between frontend excellence and AI innovation"**
-
-Built with ❤️ using Next.js, TypeScript, and Tailwind CSS
+**"Built with ❤️ using Next.js, TypeScript, and Tailwind CSS"**
