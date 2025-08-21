@@ -5,12 +5,10 @@ import { Badge } from "@/components/ui/badge";
 import { Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { qualifications, contactInfo } from "@/lib/data";
 import Image from "next/image";
-// import image from "@/../public/pic.jpg";
 
 export default function Home() {
   return (
-<div className="min-h-screen bg-muted">
-
+    <div className="min-h-screen bg-muted">
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-10 md:py-8 relative z-10">
         <div className="text-center space-y-8 animate-slide-in-up">
@@ -38,7 +36,7 @@ export default function Home() {
               style={{ animationDelay: "0.2s" }}
             >
               <p className="text-xl md:text-3xl font-semibold text-slate-700 dark:text-slate-300">
-                Senior Frontend Developer
+                Senior Frontend Developer | AI Enthusiast
               </p>
               <div className="flex items-center justify-center gap-2 text-slate-600 dark:text-slate-400">
                 <MapPin className="h-5 w-5 text-blue-500" />
@@ -185,9 +183,10 @@ export default function Home() {
             "TypeScript",
             "JavaScript",
             "Tailwind CSS",
-            "Spring Boot",
+            // "Spring Boot",
             "Git",
             "Jira",
+            "Azure DevOps",
             "Agile/Scrum",
           ].map((skill) => (
             <Badge
@@ -201,7 +200,11 @@ export default function Home() {
         </div>
 
         <div className="text-center mt-8">
-          <Button variant="outline" asChild>
+          <Button
+            variant="outline"
+            asChild
+            className="bg-gradient-to-r from-slate-600 to-gray-600 hover:from-slate-700 hover:to-gray-700 text-white border-0 px-8 py-3 text-lg font-semibold rounded-xl button-hover"
+          >
             <Link href="/about">Learn More About Me</Link>
           </Button>
         </div>

@@ -34,9 +34,9 @@ export function Navigation() {
       <div className="container flex h-16 items-center justify-between">
         {/* Logo with picture - only show on non-home pages */}
         {!isHomePage ? (
-          <div className="xs:hidden ml-4">
+          <div className=" mx-2">
             <Link href="/" className="flex items-center space-x-3">
-              <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-primary shadow-sm">
+              <div className=" hidden md:block w-10 h-10 rounded-full overflow-hidden border-2 border-primary shadow-sm">
                 <Image
                   src="/pic.jpg"
                   alt="Zelalem"

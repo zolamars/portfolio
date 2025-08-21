@@ -121,6 +121,17 @@ export const projects: Project[] = [
     category: "web"
   },
   {
+    id: "semay-website",
+    title: "Semay Software Website",
+    description: "Corporate marketing website for Semay Software PLC.",
+    longDescription: "Designed and implemented a clean, responsive marketing site for Semay Software PLC to showcase services and company profile.",
+    techStack: ["React", "Vite" , "Tailwind CSS"],
+    liveUrl: "https://www.semaysoftware.com/",
+    featured: false,
+    status: "completed",
+    category: "web"
+  },
+  {
     id: "portfolio-website",
     title: "Personal Portfolio Website",
     description: "Modern, responsive portfolio website showcasing projects and skills.",
@@ -165,7 +176,7 @@ export const experiences: Experience[] = [
 
 export const skills: Skill[] = [
   // Frontend
-  { id: "react", name: "React", category: "frontend", level: "advanced" },
+  { id: "react", name: "React", category: "frontend", level: "expert" },
   { id: "nextjs", name: "Next.js", category: "frontend", level: "advanced" },
   { id: "typescript", name: "TypeScript", category: "frontend", level: "advanced" },
   { id: "javascript", name: "JavaScript", category: "frontend", level: "expert" },
@@ -174,17 +185,28 @@ export const skills: Skill[] = [
   { id: "css", name: "CSS3", category: "frontend", level: "advanced" },
   
   // Backend
-  { id: "nodejs", name: "Node.js", category: "backend", level: "advanced" },
-  { id: "express", name: "Express.js", category: "backend", level: "advanced" },
+  // { id: "nodejs", name: "Node.js", category: "backend", level: "advanced" },
+  // { id: "express", name: "Express.js", category: "backend", level: "advanced" },
   { id: "mongodb", name: "MongoDB", category: "backend", level: "intermediate" },
   { id: "postgresql", name: "PostgreSQL", category: "backend", level: "intermediate" },
   { id: "python", name: "Python", category: "backend", level: "intermediate" },
+  { id: "numpy", name: "NumPy", category: "backend", level: "intermediate" },
+  { id: "pandas", name: "Pandas", category: "backend", level: "intermediate" },
+  // { id: "sklearn", name: "scikit-learn", category: "backend", level: "beginner" },
+  // { id: "matplotlib", name: "Matplotlib", category: "backend", level: "beginner" },
+  { id: "spring", name: "Spring Boot", category: "backend", level: "beginner" },
+  { id: "java", name: "Java", category: "backend", level: "beginner" },
   
-  // Tools
+  // Tools & ML
   { id: "git", name: "Git", category: "tools", level: "advanced" },
   { id: "jira", name: "Jira", category: "tools", level: "advanced" },
+  { id: "azure", name: "Azure Devops", category: "tools", level: "advanced" },
   { id: "scrum", name: "Scrum/Agile", category: "tools", level: "advanced" },
-  { id: "figma", name: "Figma", category: "tools", level: "intermediate" }
+  { id: "figma", name: "Figma", category: "tools", level: "intermediate" },
+  { id: "jupyter", name: "Jupyter Notebook", category: "tools", level: "intermediate" },
+  { id: "ai", name: "Artificial Intelligence", category: "other", level: "beginner" },
+  { id: "ml", name: "Machine Learning", category: "other", level: "beginner" },
+  { id: "data-analysis", name: "Data Analysis", category: "other", level: "beginner" }
 ];
 
 export const certificates: Certificate[] = [
@@ -244,13 +266,14 @@ export const certificates: Certificate[] = [
 ];
 
 export const aboutMe = {
-  intro: "I'm a passionate Frontend Developer and Scrum Master with experience in building modern web applications and leading agile development teams.",
-  description: "With a strong foundation in React, Next.js, and TypeScript, I specialize in creating responsive, user-friendly web applications. My experience spans from fintech solutions to multi-service platforms, and I'm committed to writing clean, maintainable code while ensuring excellent user experiences.",
+  intro: "I'm a passionate Frontend Developer and Scrum Master with a growing interest in AI and Python development, building modern web applications while exploring the intersection of web technologies and artificial intelligence.",
+  description: "With a strong foundation in React, Next.js, and TypeScript, I specialize in creating responsive, user-friendly web applications. My experience spans from fintech solutions to multi-service platforms, and I'm committed to writing clean, maintainable code while ensuring excellent user experiences. Recently, I've been expanding my skill set into Python and AI through the UNDP Frontier Tech Leaders programme, exploring how artificial intelligence and data science can enhance web applications.",
   highlights: [
-    "Frontend development with modern frameworks",
+    "Frontend development with modern React ecosystem",
     "Agile project management and team leadership",
-    // "Full-stack web application development",
-    "Credit management and fintech systems",
-    "Responsive and accessible UI/UX design"
+    "Python programming and data analysis with NumPy, Pandas",
+    "AI and Machine Learning fundamentals through UNDP bootcamp",
+    "Credit management and fintech systems development",
+    "AI-driven web applications and intelligent user experiences"
   ]
 };
