@@ -17,7 +17,51 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Zelalem - Frontend Developer & Scrum Master",
   description:
-    "Portfolio of Zelalem, a passionate Frontend Developer and Scrum Master specializing in React, Next.js, and modern web technologies.",
+    "Portfolio of Zelalem, a passionate Frontend Developer and Scrum Master specializing in React, Next.js, and modern web technologies with growing expertise in AI and Python development.",
+  keywords: [
+    "Frontend Developer",
+    "Scrum Master",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "JavaScript",
+    "AI",
+    "Python",
+    "Machine Learning",
+    "Portfolio",
+    "Web Development",
+  ],
+  authors: [{ name: "Zelalem Abera Regassa" }],
+  creator: "Zelalem Abera Regassa",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://zelalemabera.vercel.app",
+    title: "Zelalem - Frontend Developer & Scrum Master",
+    description:
+      "Portfolio of Zelalem, a passionate Frontend Developer and Scrum Master specializing in React, Next.js, and modern web technologies with growing expertise in AI and Python development.",
+    siteName: "Zelalem Portfolio",
+    images: [
+      {
+        url: "/pic.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Zelalem Abera Regassa - Frontend Developer & Scrum Master",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Zelalem - Frontend Developer & Scrum Master",
+    description:
+      "Portfolio of Zelalem, a passionate Frontend Developer and Scrum Master specializing in React, Next.js, and modern web technologies with growing expertise in AI and Python development.",
+    images: ["/pic.jpg"],
+  },
+  icons: {
+    icon: "/pic.jpg",
+    shortcut: "/pic.jpg",
+    apple: "/pic.jpg",
+  },
 };
 
 export default function RootLayout({

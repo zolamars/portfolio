@@ -1,29 +1,35 @@
 # Zelalem Abera Regassa - Portfolio
 
-A modern, animated portfolio website showcasing my work as a Senior Frontend Developer. Built with Next.js 14, TypeScript, and Tailwind CSS, featuring unique animations and interactive elements for each page.
+🚀 **Live Site**: [https://zelalemabera.vercel.app](https://zelalemabera.vercel.app)
 
-## ✨ Features
+A modern portfolio website showcasing my work as a Senior Frontend Developer and Scrum Master with growing expertise in AI and Python development. Built with Next.js 14, TypeScript, and Tailwind CSS.
 
-### 🎨 **Unique Page Animations**
-- **Projects Page**: Tech-themed animations with floating code elements (`</>`, `{}`, `[]`)
-- **Resume Page**: Professional document theme with timeline animations
-- **Contact Page**: Communication-focused animations with message elements
-- **About Page**: Nature/growth theme with plant elements and bounce effects
+## 👨‍💻 About
 
-### 🎯 **Interactive Elements**
-- **Glass morphism effects** with backdrop blur
-- **Staggered animations** with calculated delays
-- **Hover effects** with color transitions and scale animations
-- **Gradient text and button effects**
-- **Responsive design** optimized for all screen sizes
+Frontend Developer and Scrum Master based in Addis Ababa, Ethiopia, with 5+ years of experience. Currently expanding into AI and Python development through the UNDP Frontier Tech Leaders Programme.
 
-### 🛠 **Technical Stack**
+**Focus Areas:**
+- Frontend Development (React, Next.js, TypeScript)
+- Team Leadership & Agile Processes
+- AI Integration & Python Development
+- Performance Optimization
+
+## 🛠 Tech Stack
+
 - **Next.js 14** with App Router
 - **TypeScript** for type safety
-- **Tailwind CSS** for styling
-- **Lucide React** for icons
-- **Custom CSS animations** and keyframes
-- **Dark mode support**
+- **Tailwind CSS** with custom animations
+- **shadcn/ui** components
+- **Dark/Light mode** support
+- **SEO optimized** metadata
+
+## ✨ Key Features
+
+- **Enhanced Skills Visualization**: Color-coded proficiency levels with dot indicators
+- **Interactive Animations**: Unique themes for each page
+- **Responsive Design**: Mobile-first approach
+- **AI/ML Skills**: Python, NumPy, Pandas, scikit-learn
+- **Professional Projects**: FinTech, payment systems, multi-platform solutions
 
 ## 🚀 Getting Started
 
@@ -35,7 +41,7 @@ A modern, animated portfolio website showcasing my work as a Senior Frontend Dev
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/zolbera-portfolio.git
+   git clone https://github.com/zolamars/portfolio.git
    cd zolbera-portfolio
    ```
 
@@ -90,37 +96,6 @@ zolbera-portfolio/
 └── package.json
 ```
 
-## 🎨 Animation System
-
-The portfolio features a sophisticated animation system with:
-
-- **Page-specific themes** with unique color schemes
-- **Floating background elements** that match each page's theme
-- **Staggered entrance animations** for content sections
-- **Interactive hover states** with smooth transitions
-- **Glass morphism effects** for modern UI elements
-
-### Animation Classes
-- `animate-slide-in-up` - Content slides up from bottom
-- `animate-slide-in-left` - Content slides in from left
-- `animate-bounce-in` - Bouncy entrance animation
-- `animate-float` - Floating background elements
-- `animate-gradient` - Animated gradient backgrounds
-
-## 🌙 Dark Mode
-
-The portfolio includes full dark mode support with:
-- Automatic theme detection
-- Manual theme toggle
-- Consistent color schemes across themes
-- Optimized contrast ratios
-
-## 📱 Responsive Design
-
-- **Mobile-first approach**
-- **Flexible grid layouts**
-- **Optimized typography scaling**
-- **Touch-friendly interactions**
 
 ## 🚀 Deployment
 
@@ -150,24 +125,16 @@ Customize animations in `src/app/globals.css` under the animation keyframes sect
 - **Styling**: Modify Tailwind classes or add custom CSS
 - **Layout**: Edit component files in `src/components/`
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 📞 Contact
 
-- **Email**: [your-email@example.com]
-- **LinkedIn**: [your-linkedin-profile]
-- **GitHub**: [your-github-profile]
+- **Email**: [zolyemek@gmail.com](mailto:zolyemek@gmail.com)
+- **LinkedIn**: [linkedin.com/in/zolbera](https://www.linkedin.com/in/zolbera)
+- **GitHub**: [github.com/zolamars](https://github.com/zolamars)
+- **Portfolio**: [https://zelalemabera.vercel.app](https://zelalemabera.vercel.app)
 
 ---
+
+**"Bridging the gap between frontend excellence and AI innovation"**
 
 Built with ❤️ using Next.js, TypeScript, and Tailwind CSS
