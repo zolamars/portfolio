@@ -1,7 +1,27 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Mail, Linkedin, Github, MapPin, Send } from "lucide-react";
+import { Mail, Linkedin, Github, MapPin } from "lucide-react";
 import { contactInfo } from "@/lib/data";
+import { ContactForm } from "@/components/contact-form";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Me",
+  description: "Get in touch with Zelalem Abera Regassa, Senior Frontend Developer & Scrum Master from Ethiopia. Available for freelance projects, full-time opportunities, and consulting work. Contact me for React, Next.js, TypeScript, and AI development projects.",
+  keywords: [
+    "contact Zelalem Abera",
+    "hire frontend developer",
+    "React developer for hire",
+    "freelance developer Ethiopia",
+    "Scrum Master consultant",
+    "frontend development services",
+    "Next.js consultant",
+    "TypeScript expert hire"
+  ],
+  openGraph: {
+    title: "Contact Zelalem Abera - Senior Frontend Developer",
+    description: "Get in touch for frontend development projects, consulting, or full-time opportunities. Specializing in React, Next.js, TypeScript, and AI development.",
+  },
+};
 
 export default function Contact() {
   return (
@@ -60,106 +80,7 @@ export default function Contact() {
             className="animate-slide-in-up"
             style={{ animationDelay: "0.4s" }}
           >
-            <Card className="glass border-teal-200 dark:border-teal-800 hover:shadow-2xl hover:shadow-teal-500/20 transition-all duration-500">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
-                  <Send className="h-5 w-5" />
-                  Send Me a Message
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <form className="space-y-6">
-                  <div className="grid gap-4 sm:grid-cols-2">
-                    <div className="group">
-                      <label
-                        htmlFor="firstName"
-                        className="block text-sm font-medium mb-2 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors"
-                      >
-                        First Name
-                      </label>
-                      <input
-                        type="text"
-                        id="firstName"
-                        name="firstName"
-                        className="w-full px-3 py-2 border border-input bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-300 hover:border-teal-300 dark:hover:border-teal-600"
-                        placeholder="John"
-                      />
-                    </div>
-                    <div className="group">
-                      <label
-                        htmlFor="lastName"
-                        className="block text-sm font-medium mb-2 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors"
-                      >
-                        Last Name
-                      </label>
-                      <input
-                        type="text"
-                        id="lastName"
-                        name="lastName"
-                        className="w-full px-3 py-2 border border-input bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-300 hover:border-teal-300 dark:hover:border-teal-600"
-                        placeholder="Doe"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="group">
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium mb-2 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors"
-                    >
-                      Email Address
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      className="w-full px-3 py-2 border border-input bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-300 hover:border-teal-300 dark:hover:border-teal-600"
-                      placeholder="john@example.com"
-                    />
-                  </div>
-
-                  <div className="group">
-                    <label
-                      htmlFor="subject"
-                      className="block text-sm font-medium mb-2 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors"
-                    >
-                      Subject
-                    </label>
-                    <input
-                      type="text"
-                      id="subject"
-                      name="subject"
-                      className="w-full px-3 py-2 border border-input bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-300 hover:border-teal-300 dark:hover:border-teal-600"
-                      placeholder="Project Collaboration"
-                    />
-                  </div>
-
-                  <div className="group">
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-medium mb-2 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors"
-                    >
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={6}
-                      className="w-full px-3 py-2 border border-input bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent resize-vertical transition-all duration-300 hover:border-teal-300 dark:hover:border-teal-600"
-                      placeholder="Tell me about your project or how we can work together..."
-                    />
-                  </div>
-
-                  <Button
-                    type="submit"
-                    className="w-full bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white border-0 px-8 py-3 text-lg font-semibold rounded-xl button-hover"
-                  >
-                    <Send className="h-4 w-4 mr-2" />
-                    Send Message
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+            <ContactForm />
           </div>
 
           {/* Contact Information */}

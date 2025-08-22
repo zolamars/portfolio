@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navigation } from "@/components/navigation";
+import { StructuredData } from "@/components/structured-data";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,52 +16,96 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Zelalem - Frontend Developer & Scrum Master",
+  metadataBase: new URL('https://zelalemabera.vercel.app'),
+  title: {
+    default: "Zelalem Abera Regassa - Senior Frontend Developer & AI Enthusiast",
+    template: "%s | Zelalem Abera Portfolio"
+  },
   description:
-    "Portfolio of Zelalem, a passionate Frontend Developer and Scrum Master specializing in React, Next.js, and modern web technologies with growing expertise in AI and Python development.",
+    "Senior Frontend Developer & Scrum Master from Ethiopia specializing in React, Next.js, TypeScript, and AI development. 5+ years experience building scalable web applications, FinTech solutions, and modern user interfaces. Available for freelance projects and full-time opportunities.",
   keywords: [
-    "Frontend Developer",
+    "Zelalem Abera Regassa",
+    "Senior Frontend Developer Ethiopia",
+    "React Developer Addis Ababa",
+    "Next.js Developer",
+    "TypeScript Expert",
     "Scrum Master",
-    "React",
-    "Next.js",
-    "TypeScript",
-    "JavaScript",
-    "AI",
-    "Python",
-    "Machine Learning",
-    "Portfolio",
-    "Web Development",
+    "AI Developer Ethiopia",
+    "Python Developer",
+    "Machine Learning Ethiopia",
+    "Web Developer Portfolio",
+    "FinTech Developer",
+    "JavaScript Expert",
+    "Frontend Consultant",
+    "Ethiopian Software Developer",
+    "React Consultant",
+    "UI/UX Developer",
+    "Responsive Web Design",
+    "Performance Optimization",
+    "Agile Development",
+    "Modern Web Technologies"
   ],
-  authors: [{ name: "Zelalem Abera Regassa" }],
+  authors: [{ name: "Zelalem Abera Regassa", url: "https://zelalemabera.vercel.app" }],
   creator: "Zelalem Abera Regassa",
+  publisher: "Zelalem Abera Regassa",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code", // Add your Google Search Console verification code
+  },
+  category: 'technology',
+  classification: 'portfolio',
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://zelalemabera.vercel.app",
-    title: "Zelalem - Frontend Developer & Scrum Master",
+    title: "Zelalem Abera Regassa - Senior Frontend Developer & AI Enthusiast",
     description:
-      "Portfolio of Zelalem, a passionate Frontend Developer and Scrum Master specializing in React, Next.js, and modern web technologies with growing expertise in AI and Python development.",
-    siteName: "Zelalem Portfolio",
+      "Senior Frontend Developer & Scrum Master from Ethiopia specializing in React, Next.js, TypeScript, and AI development. 5+ years experience building scalable web applications, FinTech solutions, and modern user interfaces.",
+    siteName: "Zelalem Abera Portfolio",
     images: [
       {
         url: "/pic.jpg",
         width: 1200,
         height: 630,
-        alt: "Zelalem Abera Regassa - Frontend Developer & Scrum Master",
+        alt: "Zelalem Abera Regassa - Senior Frontend Developer & AI Enthusiast Portfolio",
+        type: "image/jpeg",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Zelalem - Frontend Developer & Scrum Master",
+    site: "@zolbera", // Add your Twitter handle
+    creator: "@zolbera", // Add your Twitter handle
+    title: "Zelalem Abera Regassa - Senior Frontend Developer & AI Enthusiast",
     description:
-      "Portfolio of Zelalem, a passionate Frontend Developer and Scrum Master specializing in React, Next.js, and modern web technologies with growing expertise in AI and Python development.",
-    images: ["/pic.jpg"],
+      "Senior Frontend Developer & Scrum Master from Ethiopia. 5+ years experience in React, Next.js, TypeScript, and AI development. Available for projects.",
+    images: {
+      url: "/pic.jpg",
+      alt: "Zelalem Abera Regassa - Senior Frontend Developer Portfolio",
+    },
+  },
+  alternates: {
+    canonical: "https://zelalemabera.vercel.app",
   },
   icons: {
-    icon: "/pic.jpg",
-    shortcut: "/pic.jpg",
-    apple: "/pic.jpg",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/pic.jpg", sizes: "32x32", type: "image/jpeg" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/pic.jpg", sizes: "180x180", type: "image/jpeg" },
+    ],
   },
 };
 
@@ -71,6 +116,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <StructuredData />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
