@@ -36,7 +36,7 @@ export default function Home() {
               style={{ animationDelay: "0.2s" }}
             >
               <p className="text-xl md:text-3xl font-semibold text-slate-700 dark:text-slate-300">
-                Senior Frontend Developer | AI Enthusiast
+                Senior Frontend Developer
               </p>
               <div className="flex items-center justify-center gap-2 text-slate-600 dark:text-slate-400">
                 <MapPin className="h-5 w-5 text-blue-500" />

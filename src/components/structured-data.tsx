@@ -2,25 +2,26 @@ export function StructuredData() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Zelalem Abera Regassa",
-    "alternateName": ["Zelalem Abera", "Zolbera"],
-    "jobTitle": ["Senior Frontend Developer", "Scrum Master", "AI Enthusiast"],
-    "description": "Senior Frontend Developer and Scrum Master from Ethiopia specializing in React, Next.js, TypeScript, and AI development. 5+ years experience building scalable web applications, FinTech solutions, and modern user interfaces.",
-    "url": "https://zelalemabera.vercel.app",
-    "image": "https://zelalemabera.vercel.app/pic.jpg",
-    "sameAs": [
+    name: "Zelalem Abera Regassa",
+    alternateName: ["Zelalem Abera", "Zolbera"],
+    jobTitle: ["Senior Frontend Developer", "Scrum Master"],
+    description:
+      "Senior Frontend Developer and Scrum Master from Ethiopia specializing in React, Next.js, TypeScript, and AI development. 5+ years experience building scalable web applications, FinTech solutions, and modern user interfaces.",
+    url: "https://zelalemabera.vercel.app",
+    image: "https://zelalemabera.vercel.app/pic.jpg",
+    sameAs: [
       "https://www.linkedin.com/in/zolbera",
       "https://github.com/zolamars",
-      "mailto:zolyemek@gmail.com"
+      "mailto:zolyemek@gmail.com",
     ],
-    "address": {
+    address: {
       "@type": "PostalAddress",
-      "addressLocality": "Addis Ababa",
-      "addressCountry": "Ethiopia"
+      addressLocality: "Addis Ababa",
+      addressCountry: "Ethiopia",
     },
-    "knowsAbout": [
+    knowsAbout: [
       "React.js",
-      "Next.js", 
+      "Next.js",
       "TypeScript",
       "JavaScript",
       "Frontend Development",
@@ -31,58 +32,59 @@ export function StructuredData() {
       "Artificial Intelligence",
       "Web Development",
       "FinTech",
-      "UI/UX Design"
+      "UI/UX Design",
     ],
-    "worksFor": {
+    worksFor: {
       "@type": "Organization",
-      "name": "Semay Software",
-      "description": "Frontend Developer & Scrum Master"
+      name: "Semay Software",
+      description: "Frontend Developer & Scrum Master",
     },
-    "alumniOf": {
+    alumniOf: {
       "@type": "Organization",
-      "name": "Addis Ababa Institute of Technology (AAIT), Addis Ababa University",
-      "description": "Electrical and Computer Engineering"
+      name: "Addis Ababa Institute of Technology (AAIT), Addis Ababa University",
+      description: "Electrical and Computer Engineering",
     },
-    "hasCredential": [
+    hasCredential: [
       {
         "@type": "EducationalOccupationalCredential",
-        "name": "Agile with Atlassian Jira",
-        "credentialCategory": "certificate",
-        "recognizedBy": {
+        name: "Agile with Atlassian Jira",
+        credentialCategory: "certificate",
+        recognizedBy: {
           "@type": "Organization",
-          "name": "Atlassian"
-        }
-      },
-      {
-        "@type": "EducationalOccupationalCredential", 
-        "name": "Programming for Everybody (Getting Started with Python)",
-        "credentialCategory": "certificate",
-        "recognizedBy": {
-          "@type": "Organization",
-          "name": "University of Michigan (Coursera)"
-        }
+          name: "Atlassian",
+        },
       },
       {
         "@type": "EducationalOccupationalCredential",
-        "name": "Frontier Tech Leaders Programme – Ethiopia Machine Learning Bootcamp",
-        "credentialCategory": "certificate", 
-        "recognizedBy": {
+        name: "Programming for Everybody (Getting Started with Python)",
+        credentialCategory: "certificate",
+        recognizedBy: {
           "@type": "Organization",
-          "name": "UNDP"
-        }
-      }
+          name: "University of Michigan (Coursera)",
+        },
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        name: "Frontier Tech Leaders Programme – Ethiopia Machine Learning Bootcamp",
+        credentialCategory: "certificate",
+        recognizedBy: {
+          "@type": "Organization",
+          name: "UNDP",
+        },
+      },
     ],
-    "mainEntity": {
+    mainEntity: {
       "@type": "WebSite",
-      "name": "Zelalem Abera Portfolio",
-      "url": "https://zelalemabera.vercel.app",
-      "description": "Portfolio website showcasing frontend development projects, skills, and experience",
-      "inLanguage": "en-US",
-      "copyrightHolder": {
+      name: "Zelalem Abera Portfolio",
+      url: "https://zelalemabera.vercel.app",
+      description:
+        "Portfolio website showcasing frontend development projects, skills, and experience",
+      inLanguage: "en-US",
+      copyrightHolder: {
         "@type": "Person",
-        "name": "Zelalem Abera Regassa"
-      }
-    }
+        name: "Zelalem Abera Regassa",
+      },
+    },
   };
 
   return (
